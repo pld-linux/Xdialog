@@ -1,6 +1,6 @@
 Summary:	Xdialog in replacement for the cdialog program
 Name:		Xdialog
-Version:	1.4.5
+Version:	1.4.6
 Release:	1
 License:	GPL
 Group:		X11/Applications
@@ -41,5 +41,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,NEWS,AUTHORS,BUGS,ChangeLog}.gz samples/*.gz
+%doc *.gz samples/*.gz
 %attr(755,root,root) %{_bindir}/*
