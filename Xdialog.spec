@@ -1,16 +1,18 @@
 Summary:	Xdialog in replacement for the dialog program
 Summary(pl):	Xdialog jest zamiennikiem dla programu cdialog
 Name:		Xdialog
-Version:	2.0.3
-Release:	2
+Version:	2.0.4
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(de):	X11/Applikationen
+Group(es):	X11/Aplicaciones
 Group(pl):	X11/Aplikacje
+Group(pt_BR):	X11/Aplicações
+Group(pt):	X11/Aplicações
 Source0:	http://xdialog.free.fr/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-ac_fix.patc
 URL:		http://xdialog.free.fr/
-Requires:	perl-modules
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.0
@@ -36,6 +38,7 @@ dialoga w program z interejsem X-window.
 %patch -p1
 
 %build
+rm -f missing
 aclocal
 autoconf
 automake -a -c
