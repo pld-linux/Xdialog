@@ -1,0 +1,49 @@
+--- Xdialog-2.0.3/configure.in~	Thu Jul 12 11:05:41 2001
++++ Xdialog-2.0.3/configure.in	Wed Jul 18 03:28:30 2001
+@@ -1,14 +1,7 @@
+ dnl Process this file with autoconf to produce a configure script.
+ 
+ AC_INIT(configure.in)
+-
+-PACKAGE=Xdialog
+-VERSION=2.0.3
+-AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE")
+-AC_DEFINE_UNQUOTED(VERSION, "$VERSION")
+-AC_SUBST(PACKAGE)
+-AC_SUBST(VERSION)
+-AM_INIT_AUTOMAKE(${PACKAGE}, ${VERSION})
++AM_INIT_AUTOMAKE(Xdialog, 2.0.3)
+ 
+ AM_CONFIG_HEADER(config.h)
+ 
+@@ -44,30 +37,6 @@
+ packagesrcdir=`cd $srcdir && pwd`
+ AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
+ 
+-dnl Use -Wall if we have gcc.
+-changequote(,)dnl
+-if test "x$GCC" = "xyes"; then
+-  case " $CFLAGS " in
+-  *[\ \	]-Wall[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -Wall" ;;
+-  esac
+-  case " $CFLAGS " in
+-  *[\ \	]-s[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -s" ;;
+-  esac
+-  case `gcc --version` in
+-  2.95*|2.96*|2.97*)
+-  case " $CFLAGS " in
+-  *[\ \	]-fno-omit-frame-pointer[\ \	]*) ;;
+-  *) CFLAGS="$CFLAGS -fno-omit-frame-pointer" ;;
+-  esac
+-  AC_MSG_RESULT(buggy GCC version: compiling with -fno-omit-frame-pointer)
+-  ;;
+-  *) ;;
+-  esac
+-fi
+-changequote([,])dnl
+-
+ AC_ARG_WITH(french-labels,
+   [  --with-french-labels    Enables french labels in menus],[
+   CPPFLAGS="$CPPFLAGS -DFRENCH"
