@@ -1,5 +1,5 @@
-Summary:	Xdialog in replacement for the dialog program
-Summary(pl):	Xdialog jest zamiennikiem dla programu cdialog
+Summary:	Xdialog - replacement for the dialog program
+Summary(pl):	Xdialog - zamiennik dla programu cdialog
 Name:		Xdialog
 Version:	2.1.1
 Release:	1
@@ -7,14 +7,13 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://thgodef.nerim.net/xdialog/%{name}-%{version}.tar.bz2
 # Source0-md5:	379cd3983a22d98d4436e8d4f16a56e1
+Patch0:		%{name}-po.patch
 URL:		http://xdialog.dyns.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Xdialog is designed to be a drop in replacement for the cdialog
@@ -30,12 +29,15 @@ dialogu mo¿a zamieniæ w program z interejsem X Window.
 
 %prep
 %setup -q
+%patch0 -p1
+
+mv -f po/{no_NO,nb}.po
 
 %build
-rm -f missing
 %{__gettextize}
 %{__aclocal}
 %{__autoconf}
+%{__autoheader}
 %{__automake}
 %configure
 %{__make}
@@ -44,12 +46,15 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	doc_DATA=
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README NEWS AUTHORS BUGS ChangeLog samples/
 %attr(755,root,root) %{_bindir}/*
