@@ -1,12 +1,13 @@
 Summary:	Xdialog in replacement for the dialog program
 Summary(pl):	Xdialog jest zamiennikiem dla programu cdialog
 Name:		Xdialog
-Version:	1.5.3
+Version:	2.0.0
 Release:	1
 License:	GPL
 Group:		X11/Applications
 Group(pl):	X11/Aplikacje
 Source0:	http://xdialog.free.fr/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-man.patch
 URL:		http://xdialog.free.fr/
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,6 +32,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %setup -q
 
+%patch0 -p1
+
 %build
 %configure 
 %{__make} 
@@ -48,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz samples/*.gz html
+%doc *.gz samples/*.gz 
 %attr(755,root,root) %{_bindir}/*
