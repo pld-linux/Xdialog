@@ -1,7 +1,7 @@
 Summary:	Xdialog in replacement for the dialog program
 Summary(pl):	Xdialog jest zamiennikiem dla programu cdialog
 Name:		Xdialog
-Version:	2.0.1
+Version:	2.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications
