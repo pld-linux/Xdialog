@@ -1,0 +1,10 @@
+--- Xdialog-2.1.2/configure.in.orig	2004-08-31 18:51:36.000000000 +0200
++++ Xdialog-2.1.2/configure.in	2004-08-31 18:53:16.000000000 +0200
+@@ -19,6 +19,7 @@
+ AC_PROG_CC
+ AM_PROG_CC_STDC
+ AC_HEADER_STDC
++AC_PROG_RANLIB
+ AC_CHECK_HEADERS(unistd.h)
+ AC_CHECK_HEADERS(errno.h)
+ AC_CHECK_HEADERS(fcntl.h)
