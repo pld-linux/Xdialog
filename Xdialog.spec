@@ -1,6 +1,6 @@
-Name:		Xdialog
 Summary:	Xdialog in replacement for the cdialog program
-Version:	1.4.4
+Name:		Xdialog
+Version:	1.4.5
 Release:	1
 License:	GPL
 Group:		X11/Applications
@@ -25,14 +25,14 @@ rm -rf $RPM_BUILD_ROOT
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure 
 %{__make} 
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf README NEWS AUTHORS BUGS ChangeLog samples/*
 
