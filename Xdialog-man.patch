@@ -1,0 +1,11 @@
+--- ./Makefile.am.orig	Sun May 13 00:50:01 2001
++++ ./Makefile.am	Sun May 13 01:09:47 2001
+@@ -12,7 +12,7 @@
+ 	cat doc/license.head COPYING doc/license.tail >doc/license.html;
+ 	@$(NORMAL_INSTALL)
+ 	sed -e 's/%%version%%/$(VERSION)/' doc/Xdialog.man >doc/Xdialog.1; \
+-	$(INSTALL_DATA) -d $(DESTDIR)$(mandir)/man1/; \
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1/; \
+ 	$(INSTALL_DATA) doc/Xdialog.1 $(DESTDIR)$(mandir)/man1/Xdialog.1;
+ 
+ ## 	if test -d $(srcdir)/pixmaps; then \
