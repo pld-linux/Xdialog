@@ -10,6 +10,7 @@ Group(pl):	X11/Aplikacje
 Source0:	http://xdialog.free.fr/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-ac_fix.patc
 URL:		http://xdialog.free.fr/
+Requires:	perl-modules
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel >= 1.2.0
