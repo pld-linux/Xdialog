@@ -25,7 +25,7 @@ file selector, range box, and much more).
 %description -l pl
 Xdialog jest zaprojektowany by byæ odpowiednikiem, zamiennikiem dla
 programu cdialog. Dziêki niemu dowolny terminalowy program u¿ywaj±cy
-dialogu mo¿a zamieniæ w program z interejsem X Window.
+dialogu mo¿na zamieniæ w program z interejsem X Window.
 
 %prep
 %setup -q
