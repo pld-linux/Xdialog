@@ -1,10 +1,11 @@
 Name:		Xdialog
 Summary:	Xdialog in replacement for the cdialog program
-Version:	1.4.1
-Release:	2
+Version:	1.4.3
+Release:	1
 License:	GPL
-Group:		X11/Administration
-Source0:	http://xdialog.free.fr/Xdialog-%{version}.tar.bz2
+Group:		X11/Applications
+Group(pl):	X11/Aplikacje
+Source0:	http://xdialog.free.fr/%{name}-%{version}.tar.bz2
 URL:		http://xdialog.free.fr/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +34,7 @@ rm -rf $RPM_BUILD_ROOT
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9fn README NEWS AUTHORS BUGS ChangeLog samples/*
+gzip -9nf README NEWS AUTHORS BUGS ChangeLog samples/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
