@@ -20,14 +20,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Xdialog is designed to be a drop in replacement for the cdialog
 program. It converts any terminal based program into a program with an
-X-windows interface. The dialogs are easier to see and use and Xdialog
+X Window interface. The dialogs are easier to see and use and Xdialog
 adds even more functionalities (help button+box, treeview, editbox,
 file selector, range box, and much more).
 
 %description -l pl
 Xdialog jest zaprojektowany by byæ odpowiednikiem, zamiennikiem dla
 programu cdialog. Dziêki niemu dowolny terminalowy program u¿ywaj±cy
-dialoga w program z interejsem X-window.
+dialogu mo¿a zamieniæ w program z interejsem X Window.
 
 %prep
 %setup -q
@@ -38,8 +38,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure 
-%{__make} 
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
