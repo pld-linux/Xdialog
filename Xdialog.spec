@@ -13,11 +13,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-Xdialog is designed to be a drop in replacement for the cdialog program. It
-converts any terminal based program into a program with an X-windows
-interface. The dialogs are easier to see and use and Xdialog adds even more
-functionalities (help button+box, treeview, editbox, file selector, range
-box, and much more).
+Xdialog is designed to be a drop in replacement for the cdialog
+program. It converts any terminal based program into a program with an
+X-windows interface. The dialogs are easier to see and use and Xdialog
+adds even more functionalities (help button+box, treeview, editbox,
+file selector, range box, and much more).
 
 %prep
 rm -rf $RPM_BUILD_ROOT
