@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.chez.com/godefroy/%{name}-%{version}.tar.bz2
+# Source0-md5:	53b2f0246af8ac51455c02391adba3fb
 Patch0:		%{name}-ac_fix.patc
 URL:		http://www.chez.com/godefroy/
 BuildRequires:	autoconf
