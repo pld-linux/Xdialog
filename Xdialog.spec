@@ -1,6 +1,6 @@
 Name:		Xdialog
 Summary:	Xdialog in replacement for the cdialog program
-Version:	1.4.3
+Version:	1.4.4
 Release:	1
 License:	GPL
 Group:		X11/Applications
