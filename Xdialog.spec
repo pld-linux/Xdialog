@@ -55,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc README NEWS AUTHORS BUGS ChangeLog samples/
+%doc AUTHORS BUGS ChangeLog README samples/
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
