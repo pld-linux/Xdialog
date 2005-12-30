@@ -2,7 +2,7 @@ Summary:	Xdialog - replacement for the dialog program
 Summary(pl):	Xdialog - zamiennik dla programu cdialog
 Name:		Xdialog
 Version:	2.1.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://thgodef.nerim.net/xdialog/%{name}-%{version}.tar.bz2
@@ -47,6 +47,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	doc_DATA=
+
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/{no_NO,nb}
+mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sv{_SE,}
 
 %find_lang %{name}
 
