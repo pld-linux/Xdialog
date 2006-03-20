@@ -33,4 +33,3 @@ diff -ur Xdialog-2.2.0-orig/configure.in Xdialog-2.2.0/configure.in
  
  dnl Set PACKAGE_DATA_DIR in config.h.
  if test "x${datadir}" = 'x${prefix}/share'; then
-Only in Xdialog-2.2.0: configure.in.orig
