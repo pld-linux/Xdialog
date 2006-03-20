@@ -1,10 +1,36 @@
---- Xdialog-2.1.2/configure.in.orig	2004-08-31 18:51:36.000000000 +0200
-+++ Xdialog-2.1.2/configure.in	2004-08-31 18:53:16.000000000 +0200
-@@ -19,6 +19,7 @@
- AC_PROG_CC
+diff -ur Xdialog-2.2.0-orig/configure.in Xdialog-2.2.0/configure.in
+--- Xdialog-2.2.0-orig/configure.in	2006-02-17 08:36:26.000000000 -0700
++++ Xdialog-2.2.0/configure.in	2006-03-19 20:58:24.000000000 -0700
+@@ -20,6 +20,7 @@
  AM_PROG_CC_STDC
+ AC_PROG_RANLIB
  AC_HEADER_STDC
 +AC_PROG_RANLIB
  AC_CHECK_HEADERS(unistd.h)
  AC_CHECK_HEADERS(errno.h)
  AC_CHECK_HEADERS(fcntl.h)
+@@ -29,20 +30,9 @@
+ ALL_LINGUAS="fr de ru es hu pt_BR no_NO id nl it pl ca sv_SE"
+ AM_GNU_GETTEXT([external])
+ 
+-compile_for="gtk1"
+-AC_ARG_WITH(gtk2,
+-  [  --with-gtk2             Compiles for GTK2],[
+-  compile_for="gtk2"
+-  CPPFLAGS="$CPPFLAGS -DUSE_GTK2"
+-  AC_MSG_RESULT(Compiling for GTK2)
+-  ])
+-if test "$compile_for" = "gtk2" ; then
+-  AM_PATH_GTK_2_0(2.2.0, ,
+-            AC_MSG_ERROR(Cannot find GTK2.))
+-else
+-  AM_PATH_GTK(1.2.0, ,
+-            AC_MSG_ERROR(Cannot find GTK: Is gtk-config in path?))
+-fi
++CPPFLAGS="$CPPFLAGS -DUSE_GTK2"
++AC_MSG_RESULT(Compiling for GTK2)
++AM_PATH_GTK_2_0(2.2.0, , AC_MSG_ERROR(Cannot find GTK2.))
+ 
+ dnl Set PACKAGE_DATA_DIR in config.h.
+ if test "x${datadir}" = 'x${prefix}/share'; then
+Only in Xdialog-2.2.0: configure.in.orig

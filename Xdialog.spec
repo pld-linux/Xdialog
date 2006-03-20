@@ -12,7 +12,7 @@ URL:		http://xdialog.dyns.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	gtk+2-devel
 Provides:	xdialog
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
