@@ -1,5 +1,5 @@
 Summary:	Xdialog - replacement for the dialog program
-Summary(pl):	Xdialog - zamiennik dla programu cdialog
+Summary(pl.UTF-8):   Xdialog - zamiennik dla programu cdialog
 Name:		Xdialog
 Version:	2.2.1
 Release:	1
@@ -24,10 +24,10 @@ X Window interface. The dialogs are easier to see and use and Xdialog
 adds even more functionalities (help button+box, treeview, editbox,
 file selector, range box, and much more).
 
-%description -l pl
-Xdialog jest zaprojektowany by byæ odpowiednikiem, zamiennikiem dla
-programu cdialog. Dziêki niemu dowolny terminalowy program u¿ywaj±cy
-dialogu mo¿na zamieniæ w program z interfejsem X Window.
+%description -l pl.UTF-8
+Xdialog jest zaprojektowany by byÄ‡ odpowiednikiem, zamiennikiem dla
+programu cdialog. DziÄ™ki niemu dowolny terminalowy program uÅ¼ywajÄ…cy
+dialogu moÅ¼na zamieniÄ‡ w program z interfejsem X Window.
 
 %prep
 %setup -q
