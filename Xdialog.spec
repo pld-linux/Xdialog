@@ -1,5 +1,5 @@
 Summary:	Xdialog - replacement for the dialog program
-Summary(pl.UTF-8):   Xdialog - zamiennik dla programu cdialog
+Summary(pl.UTF-8):	Xdialog - zamiennik dla programu cdialog
 Name:		Xdialog
 Version:	2.2.1
 Release:	1
