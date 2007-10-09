@@ -1,0 +1,6 @@
+- updated to 2.0.3,
+- added ac_fix.patch:
+-- remove all stupid passing additional flags in CFLAGS (if someone want
+   this please use $CFLAGS variable in configure environment),
+-- use in proper way AM_INIT_AUTOMAKE() macro.
+- regenerate ac/am files (now spec is ac 2.50 ready).
