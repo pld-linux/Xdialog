@@ -11,7 +11,7 @@ Patch0:		%{name}-configure.patch
 URL:		http://xdialog.dyns.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 1:2.2.0
 BuildRequires:	pkgconfig
 Provides:	xdialog
